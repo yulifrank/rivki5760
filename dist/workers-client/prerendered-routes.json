@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/addEmployee",
+    "/addRole",
+    "/allEmployee",
+    "/editEmployee",
+    "/logout",
+    "/rolesByEmployee"
+  ]
+}

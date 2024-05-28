@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row">
+    <!-- Roles by Employee Section -->
+    <div class="col-lg-6">
+      <div class="roles-by-employee-section">
+        <h2>Employee Roles</h2>
+        <app-roles-by-employee [employee]="employee"></app-roles-by-employee>
+      </div>
+    </div>
+
+    <!-- Edit Employee Section -->
+    <div class="col-lg-6">
+      <div class="edit-employee-section">
+        <h2>Edit Employee</h2>
+        <form [formGroup]="employeeForm">
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              formControlName="firstName"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              formControlName="lastName"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="idNumber" class="form-label">ID Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="idNumber"
+              formControlName="idNumber"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="dateSartingWork" class="form-label"
+              >Starting Work Date</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="dateSartingWork"
+              formControlName="dateSartingWork"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="dateOfBirth" class="form-label">Date of Birth</label>
+            <input
+              type="date"
+              class="form-control"
+              id="dateOfBirth"
+              formControlName="dateOfBirth"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select" id="gender" formControlName="gender">
+              <option value="0">Male</option>
+              <option value="1">Female</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="text-center">
+      <br />
+      <button
+        type="submit"
+        class="btn btn-primary custom-btn"
+        (click)="editEmployee()"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>
